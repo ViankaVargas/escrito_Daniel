@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números en Forma Literal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="juego-container">
+        <h1>Números en Forma Literal</h1>
+        <div id="palabra"></div>
+        <div id="respuesta">
+            <input type="text" id="inputRespuesta" placeholder="Ingresa tu respuesta">
+            <button onclick="verificarRespuesta()">Verificar</button>
+            <p id="resultado"></p>
+        </div>
+    </div>
+
+    <div id="incorrect-list" style="display: none;">
+        <h2>Preguntas Incorrectas</h2>
+        <ul id="incorrect-words"></ul>
+        <p id="summary"></p>
+        <button onclick="retryIncorrectAnswers()">Reintentar Preguntas Incorrectas</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

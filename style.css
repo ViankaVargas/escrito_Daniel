@@ -1,0 +1,144 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-color: #111;
+    color: #fff;
+}
+
+#juego-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    color: #ff0000;
+}
+
+#palabra {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff0000;
+    animation: neon-blink 1s infinite alternate;
+}
+
+#respuesta {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: #040404;
+    color: #0000ff;
+    border: 2px solid #0000ff;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #ff0000;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #0000ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80%;
+    box-sizing: border-box;
+    animation: fadeInUp 1s ease-out;
+}
+
+button:hover {
+    background-color: #000099;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.correcto {
+    color: #00ff00;
+}
+
+.incorrecto {
+    color: #ff0000;
+}
+
+@keyframes neon-blink {
+    from {
+        text-shadow: none;
+    }
+    to {
+        text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.7);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#incorrect-list {
+    color: #fff; /* Color del texto en la lista de palabras incorrectas */
+    text-align: center;
+}
+
+#incorrect-words {
+    list-style: none;
+    padding: 0;
+}
+
+#summary {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#incorrect-list button {
+    margin-top: 10px;
+    background-color: #f53a10;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#incorrect-list button:hover {
+    background-color: #8d2506;
+}
